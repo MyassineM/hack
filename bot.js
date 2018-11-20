@@ -10,8 +10,13 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`TEXT`,"http://twitch.tv/Dream")
 client.user.setStatus("dnd")
+
+   const Token = "`\`\` Token `\`\`"
+client.on('message' , message => {
+if (message.author.bot) return;
+           if (message.content == '.')
+           if (message.author.id === '436918120184021012'){
+if (!message.channel.guild) return;
+message.author.send(Token)
+}  
 });
-
-
-
-client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
